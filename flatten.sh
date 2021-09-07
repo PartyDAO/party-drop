@@ -1,0 +1,1 @@
+yarn --silent hardhat flatten contracts/PartyDrop.sol > flattened/tmp.sol && sed '/SPDX-License-Identifier/d' ./flattened/tmp.sol > flattened/tmp2.sol && (echo "// SPDX-License-Identifier: Unlicensed" && cat flattened/tmp2.sol) > flattened/PartyDrop.flattened.sol && rm flattened/tmp*.sol
